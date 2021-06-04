@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: #333;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.draggable {
+  margin: 0.5em;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: .5;
+}
+
+.draggable .name {
+  display: inline-block;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-right: 0.8em;
+}
+
+.draggable .duration::after {
+  content: " secs";
+  font-size: 0.88em;
+}
+
+.draggable button {
+  float: right;
+}
+
+.timer {
+  margin-top: 1em;
+}
+.timer #time {
+  display: block;
+  width: 50%;
+  font-size: 7em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.timer button {
+  display: block;
+  width: 2.7rem;
+  margin: 0 auto;
+  padding: 0 auto;
+
+}
