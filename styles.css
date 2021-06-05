@@ -36,16 +36,23 @@ input[type="text"] {
 select {
   width: 5em;
 }
-button#addNewExercise {
-  display: block;
-  margin: 0 auto;
+.inputButtons {
+  display: flex;
+  margin: 0.5em auto 1.2em;
   padding: 0 auto;
+  max-width: 700px;
+  width: 95%;
+  justify-content: center;
+  align-items: flex-end;
+}
+.inputButtons button {
+  display: inline-block;
   font-size: 1.3rem;
   width: 4em;
   text-align: center;
   text-decoration: none;
+  margin: 0 0.5rem;
 }
-
 
 
 /* Timer */
@@ -131,6 +138,20 @@ button#addNewExercise {
   float: right;
 }
 
+
 audio {
   display: none;
+}
+
+
+/* Share URL  */
+#share-url {
+
+  width: 90%;
+  max-width: 750px;
+  /* display: block; */
+  display: none;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-top: 1em;
 }

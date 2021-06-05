@@ -1,7 +1,7 @@
 import { setDraggables } from './drag.js';
 import { timer } from './timer.js';
 import { refresh } from './refresh.js';
-import { loadQueue, saveQueue } from './storage.js';
+import { saveQueue, loadQueueFromLocalStorage, loadQueueFromDataURL, encodeDataURL, parseDataURL, loadCopyShareURL } from './storage.js';
 
 const btn = document.getElementById("addNewExercise");
 
@@ -27,6 +27,7 @@ btn.addEventListener("click", () => {
         let toRemove = event.srcElement.parentElement;
         toRemove.remove();
         saveQueue();
+        encodeDataURL();
     })
     draggable.appendChild(removeBtn);
     
@@ -47,14 +48,19 @@ btn.addEventListener("click", () => {
 
     // Cache results
     saveQueue();
+    encodeDataURL();
 })
 
 // Set up
+loadCopyShareURL();
 // Add example exercise
-if (window.localStorage.getItem("queue") === null)
+let cache = parseDataURL();
+if (cache !== null) 
+    loadQueueFromDataURL(btn);
+else if (window.localStorage.getItem("queue") !== null)
+    loadQueueFromLocalStorage(btn);
+else
     btn.click(); 
-else 
-    loadQueue(btn);
 
 
 // Make input selected color consistent
