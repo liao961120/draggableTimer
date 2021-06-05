@@ -8,33 +8,39 @@
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" type="module"></script>
   <!-- <script src="drag.js" defer></script> -->
-  <title>Interval Training Timer</title>
+  <title>Interval Timer</title>
 </head>
 
 <body>
 
   <!-- Input -->
   <div class="addEvents">
-    <label for="exercise-name">Name: </label>
-    <input type="text" id="exercise-name" value="Get Ready">
-
-    <label for="duration">Duration (sec): </label>
-    <input type="number" id="exercise-duration" value="4">
-
-    <div class="showcolor">
-      <span id="selected-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </div>
-    <select name="color" id="exercise-color">
-      <option value="#38cdff" selected>Blue</option>
-      <option value="#ff0000">Red</option>
-      <option value="#00d423">Green</option>
-      <option value="#FF00FF">Purple</option>
-      <option value="#F76B00">Orange</option>
-      <option value="#DBA400">Yellow</option>
-    </select>
+    <span>
+      <label for="exercise-name">Name: </label>
+      <input type="text" id="exercise-name" value="Get Ready">
+    </span>
     
-    <button id="addNewExercise">Add</button>
+    <span>
+      <label for="duration">Duration: </label>
+      <input type="number" id="exercise-duration" value="4">
+    </span>
+
+    <span>
+      <div class="showcolor">
+        <span id="selected-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </div>
+      <select name="color" id="exercise-color">
+        <option value="#38cdff" selected>Blue</option>
+        <option value="#ff0000">Red</option>
+        <option value="#00d423">Green</option>
+        <option value="#FF00FF">Purple</option>
+        <option value="#F76B00">Orange</option>
+        <option value="#DBA400">Yellow</option>
+      </select>
+    </span>
   </div>
+  <button id="addNewExercise">Add</button>
+  <br />
 
   <!-- Timer -->
   <div class="timer">
