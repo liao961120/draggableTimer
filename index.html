@@ -6,44 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
-  <script src="addEvents.js" type="module"></script>
+  <script src="main.js" type="module"></script>
   <!-- <script src="drag.js" defer></script> -->
   <title>Interval Training Timer</title>
 </head>
 
 <body>
 
+  <!-- Input -->
   <div class="addEvents">
     <label for="exercise-name">Name: </label>
-    <input type="text" id="exercise-name" value="Sit up">
+    <input type="text" id="exercise-name" value="Get Ready">
 
-    <label for="duration">Duration: </label>
-    <input type="number" id="exercise-duration" value="60">
+    <label for="duration">Duration (sec): </label>
+    <input type="number" id="exercise-duration" value="4">
 
-    <!-- ToDo: link to JS -->
-    <label for="exercise-color">Color: </label>
-    <input type="color" id="exercise-color" value="#ff0000">
+    <div class="showcolor">
+      <span id="selected-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+    <select name="color" id="exercise-color">
+      <option value="#38cdff" selected>Blue</option>
+      <option value="#ff0000">Red</option>
+      <option value="#00d423">Green</option>
+      <option value="#FF00FF">Purple</option>
+      <option value="#F76B00">Orange</option>
+      <option value="#DBA400">Yellow</option>
+    </select>
+    
     <button id="addNewExercise">Add</button>
   </div>
 
+  <!-- Timer -->
   <div class="timer">
-    <span id="time">00:00</span>
+    <h5 id="curr-exercise">Current Exercise</h3>
+    <span id="time" data-name="test" data-color="#A9A9A9">00:00</span>
     <button id="startTimer">Start</button>
   </div>
+  
 
-
+  <!-- Exercises -->
   <div class="queue">
-
-    <div class="container" id="queue">
-      <!--       
-      <div class="draggable" draggable="true" data-name="Push up" data-time="100">
-        <span class="name">Push up</span> <span class="duration">100</span>
-      </div>
-       -->
-    </div>
-
+    <div class="container" id="queue"></div>
   </div>
 
-</body>
 
+
+<audio controls width="0" height="0"  id="beep-short">
+  <source src="beep-short.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+<audio controls width="0" height="0" id="beep-long">
+  <source src="beep-long.mp3" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+
+
+</body>
 </html>

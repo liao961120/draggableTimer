@@ -1,3 +1,5 @@
+import { saveQueue } from './storage.js';
+
 function setDraggables() {
   const draggables = document.querySelectorAll('.draggable')
   const containers = document.querySelectorAll('.container')
@@ -9,6 +11,7 @@ function setDraggables() {
   
     draggable.addEventListener('dragend', () => {
       draggable.classList.remove('dragging')
+      saveQueue();
     })
   })
   

@@ -1,11 +1,14 @@
 import { setDraggables } from './drag.js';
-import { getDraggableTime, startTimer } from './timer.js';
+import { timer } from './timer.js';
+import { refresh } from './refresh.js';
+import { loadQueue, saveQueue } from './storage.js';
 
 const btn = document.getElementById("addNewExercise");
 
 btn.addEventListener("click", () => {
     const name = document.getElementById("exercise-name").value;
     const time = document.getElementById("exercise-duration").value;
+    const color = document.getElementById("exercise-color").value;
 
     // Create new draggable exercise
     const draggable = document.createElement("div");
@@ -13,6 +16,8 @@ btn.addEventListener("click", () => {
     draggable.setAttribute("draggable", true);
     draggable.setAttribute("data-name", name);
     draggable.setAttribute("data-time", time);
+    draggable.setAttribute("data-color", color);
+    draggable.style.backgroundColor = color;
     draggable.innerHTML = `<span class="name">${name}</span> <span class="duration">${time}</span>`;
     
     // Add button to remove this exercise
@@ -21,6 +26,7 @@ btn.addEventListener("click", () => {
     removeBtn.addEventListener("click", function(event) {
         let toRemove = event.srcElement.parentElement;
         toRemove.remove();
+        saveQueue();
     })
     draggable.appendChild(removeBtn);
     
@@ -28,18 +34,36 @@ btn.addEventListener("click", () => {
     document.getElementById("queue").appendChild(draggable);
     setDraggables();
 
-    // Test timer
+    // Setup timer
     document.getElementById("startTimer").addEventListener("click", function() {
-        const exerciseQueue = document.querySelectorAll(".draggable");
-
-        // To Do: 
-        //   - remove setInterval
-        //   - fire an event to start next timer when count down is over 
-
+        const queue = [ ...document.querySelectorAll('.draggable') ];
         const display = document.querySelector('#time');
-        startTimer(getDraggableTime(0), display);
+        let curr_timer = 0;
+        timer(display, curr_timer, queue);
     })
+
+    // Refresh
+    refresh();
+
+    // Cache results
+    saveQueue();
 })
 
-// Add first example event
-btn.click();
+// Set up
+// Add example exercise
+if (window.localStorage.getItem("queue") === null)
+    btn.click(); 
+else 
+    loadQueue(btn);
+
+
+// Make input selected color consistent
+function selectColor(value) {
+    var target = document.getElementById('selected-color');
+    target.style.backgroundColor = value;
+}
+document.getElementById("exercise-color").addEventListener("change", function() {
+    selectColor(this.value);
+})
+// Set initial color
+selectColor(document.getElementById('exercise-color').value);

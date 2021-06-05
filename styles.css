@@ -2,12 +2,90 @@ body {
   margin: 0;
 }
 
-.container {
-  background-color: #333;
-  padding: 1rem;
-  margin-top: 1rem;
+/* Input */
+.addEvents {
+  width: 90%;
+  max-width: 750px;
+  margin: 1em auto;
+  padding: 0 auto;
+}
+.addEvents > :not(label, div) {
+  margin-right: 1rem;
+}
+.showcolor {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 0;
+  padding: 0;
+}
+.showcolor span {
+  margin: 0;
+  padding: 0;
+}
+#selected-color {
+  padding: 1px ;
+  margin: 0;
 }
 
+
+
+/* Timer */
+.timer {
+  margin-top: 1em;
+}
+.timer {
+  display: block;
+  width: 450px;
+  font-size: 8rem;
+  text-align: center;
+  margin: 10px auto;
+  padding: 0 auto;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-family: monego, monospace;
+}
+#curr-exercise {
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: attr(data-name);
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 0.95rem;
+  background-color: #A0A0A0;
+}
+.timer button {
+    display: block;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: 0;
+    padding: 0.3rem 0.35rem;
+    font-size: 1.3rem;
+    width: 100%;
+    background-color: rgb(158, 158, 158); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.timer button:hover {
+  background-color: rgba(158, 158, 158, 0.794);
+  cursor: pointer;
+}
+
+/* Exercise queue */
+.queue {
+  background-color: rgb(36, 36, 36);
+  padding: 1rem;
+  width: 90%;
+  max-width: 750px;
+  margin: 1rem auto;
+  padding: 0 auto;
+  border-radius: 7px;
+}
 .draggable {
   margin: 0.5em;
   padding: 1rem;
@@ -15,42 +93,23 @@ body {
   border: 1px solid black;
   cursor: move;
 }
-
 .draggable.dragging {
   opacity: .5;
 }
-
 .draggable .name {
   display: inline-block;
   font-size: 1.25em;
   font-weight: bold;
   margin-right: 0.8em;
 }
-
 .draggable .duration::after {
   content: " secs";
   font-size: 0.88em;
 }
-
 .draggable button {
   float: right;
 }
 
-.timer {
-  margin-top: 1em;
-}
-.timer #time {
-  display: block;
-  width: 50%;
-  font-size: 7em;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-.timer button {
-  display: block;
-  width: 2.7rem;
-  margin: 0 auto;
-  padding: 0 auto;
-
+audio {
+  display: none;
 }
