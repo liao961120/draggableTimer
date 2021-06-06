@@ -36,7 +36,7 @@ function loadCopyShareURL() {
         copyText.setSelectionRange(0, 99999); /* For mobile devices */
         document.execCommand("copy");
         copyText.style.display = "none";
-        alert("URL copied! Share your profile with this url: " + copyText.value);
+        alert("URL copied to clipboard!\nShare your timer with this url!");
     })
 }
 
