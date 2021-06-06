@@ -113,6 +113,7 @@ select {
   margin: 1rem auto;
   padding: 0 auto;
   border-radius: 7px;
+  counter-reset: div;
 }
 .draggable {
   margin: 0.5em;
@@ -136,6 +137,14 @@ select {
 }
 .draggable button {
   float: right;
+}
+
+.draggable {
+  counter-increment: div;
+}
+.draggable::before {
+  content: counter(div) ".";
+  margin-right: .8em;
 }
 
 

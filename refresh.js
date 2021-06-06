@@ -7,7 +7,7 @@ function refresh() {
     const timer = document.getElementById("time");
 
     // Update shown exercise on the timer
-    curr.innerText = first.getAttribute("data-name");
+    curr.innerText = `1. ${first.getAttribute("data-name")}`;
     curr.style.backgroundColor =  document.querySelector(".draggable").style.backgroundColor;
     // Update timer's number
     timer.innerText = formatDuration(first.getAttribute("data-time"));

@@ -23,7 +23,7 @@ function startTimer(display, curr_timer, queue) {
         display.textContent = formatDuration(timer);
         display.style.color = getDraggableColor(curr_timer, queue);
         const title = document.getElementById("curr-exercise");
-        title.innerText = getDraggableName(curr_timer, queue);
+        title.innerText = `${curr_timer + 1}. ${getDraggableName(curr_timer, queue)}`;
         title.style.backgroundColor = getDraggableColor(curr_timer, queue);
 
         if (--timer < 0) timer = duration;
