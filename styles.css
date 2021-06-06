@@ -10,7 +10,7 @@ body {
   margin: 1em auto 0.75em;
   padding: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 .showcolor {
@@ -163,4 +163,31 @@ audio {
   margin: 0 auto;
   padding: 0 auto;
   margin-top: 1em;
+}
+
+/* Social */
+.github-corner {
+  border-bottom: 0;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  top: 0;
+  z-index: 1;
+}
+.github-corner svg {
+  color: #fff;
+  /* fill: #42b983; */
+  fill: #000000;
+  height: 80px;
+  width: 80px;
+}
+
+@media only screen and (max-width: 750px) {
+  .github-corner {
+    display: none;
+  }
+  .addEvents {
+    width: 98%;
+    justify-content: space-between;
+  }
 }
