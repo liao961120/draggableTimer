@@ -73,3 +73,12 @@ document.getElementById("exercise-color").addEventListener("change", function() 
 })
 // Set initial color
 selectColor(document.getElementById('exercise-color').value);
+
+
+// Add service worker
+window.addEventListener('load', () => {
+    navigator.serviceWorker
+    .register('worker.js')
+    .then(_ => console.log('Registered service worker'))
+    .catch(e => console.log('Error registering: ',err));
+  });
