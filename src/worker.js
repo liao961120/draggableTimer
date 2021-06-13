@@ -1,5 +1,7 @@
 "use strict";
 
+// src: https://github.com/chriscoyier/Simple-Offline-Site
+
 console.log('WORKER: executing.');
 
 /* A version number is useful when updating the worker logic,
