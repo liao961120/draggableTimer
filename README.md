@@ -21,4 +21,17 @@ Since [HTML5 drag and drop API](https://developer.mozilla.org/en-US/docs/Web/API
 - Works without the internet (Service Worker)
 
 
+
+## Available Timers
+
+Below are some ready-to-use timers (contributions wellcomed):
+
+1. [Home Hiit workout][hiit-timer1] ([YouTube][hiit-src1])
+
+
+
+[hiit-src1]: https://www.youtube.com/watch?v=iqBAR0rfjiI
+[hiit-timer1]: https://timer.yongfu.name/?data=_LSB__LB_%22name%22_CL_%22Get%20Ready%22_CM_%22time%22_CL_%225%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Burpees%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_ff0000%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Jumping%20Jacks%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_FF00FF%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Russian%20Twists%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_F76B00%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22In%20_AND_%20Outs%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_00d423%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Leg%20Flutters%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_DBA400%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Plank%20knee%20to%20elbows%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_ff0000%22_RB__RSB_
+
+
 [shareURL]: https://timer.yongfu.name/?data=_LSB__LB_%22name%22_CL_%22Get%20Ready%22_CM_%22time%22_CL_%225%22_CM_%22color%22_CL_%22_PD_38cdff%22_RB__CM__LB_%22name%22_CL_%22Sit%20up%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_ff0000%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_00d423%22_RB__CM__LB_%22name%22_CL_%22Push%20up%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_F76B00%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_00d423%22_RB__CM__LB_%22name%22_CL_%22Sit%20up%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_ff0000%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_00d423%22_RB__CM__LB_%22name%22_CL_%22Push%20up%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_F76B00%22_RB__CM__LB_%22name%22_CL_%22Rest%22_CM_%22time%22_CL_%2215%22_CM_%22color%22_CL_%22_PD_00d423%22_RB__CM__LB_%22name%22_CL_%22Sit%20up%22_CM_%22time%22_CL_%2245%22_CM_%22color%22_CL_%22_PD_ff0000%22_RB__RSB_
